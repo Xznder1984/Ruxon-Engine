@@ -1,0 +1,110 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            name: linux
+            artifact_name: ruxon-engine-linux-x86_64
+          - os: windows-latest
+            name: windows
+            artifact_name: ruxon-engine-windows-x86_64
+          - os: macos-latest
+            name: macos
+            artifact_name: ruxon-engine-macos-x86_64
+    
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Install dependencies (Ubuntu)
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake ninja-build libgl1-mesa-dev
+    
+    - name: Configure CMake
+      run: cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+    
+    - name: Build
+      run: cmake --build build --config Release
+    
+    - name: Package
+      shell: bash
+      run: |
+        mkdir -p dist
+        if [ "${{ matrix.os }}" = "windows-latest" ]; then
+          cp build/editor/ruxon_editor.exe dist/ 2>/dev/null || cp build/editor/Release/ruxon_editor.exe dist/ 2>/dev/null || true
+          cp build/runtime/ruxon_player.exe dist/ 2>/dev/null || cp build/runtime/Release/ruxon_player.exe dist/ 2>/dev/null || true
+          cp build/tools/ruxon.exe dist/ 2>/dev/null || cp build/tools/Release/ruxon.exe dist/ 2>/dev/null || true
+          cp build/tools/lsp/ruxon-lsp.exe dist/ 2>/dev/null || cp build/tools/lsp/Release/ruxon-lsp.exe dist/ 2>/dev/null || true
+          cd dist && zip -r ../${{ matrix.artifact_name }}.zip .
+        elif [ "${{ matrix.os }}" = "macos-latest" ]; then
+          cp build/editor/ruxon_editor dist/ 2>/dev/null || true
+          cp build/runtime/ruxon_player dist/ 2>/dev/null || true
+          cp build/tools/ruxon dist/ 2>/dev/null || true
+          cp build/tools/lsp/ruxon-lsp dist/ 2>/dev/null || true
+          cp LICENSE dist/ 2>/dev/null || true
+          cp README.md dist/ 2>/dev/null || true
+          tar -czf ../${{ matrix.artifact_name }}.tar.gz -C dist .
+        else
+          cp build/editor/ruxon_editor dist/ 2>/dev/null || true
+          cp build/runtime/ruxon_player dist/ 2>/dev/null || true
+          cp build/tools/ruxon dist/ 2>/dev/null || true
+          cp build/tools/lsp/ruxon-lsp dist/ 2>/dev/null || true
+          cp LICENSE dist/ 2>/dev/null || true
+          cp README.md dist/ 2>/dev/null || true
+          tar -czf ../${{ matrix.artifact_name }}.tar.gz -C dist .
+        fi
+    
+    - name: Generate checksums
+      shell: bash
+      run: |
+        if [ -f "${{ matrix.artifact_name }}.zip" ]; then
+          sha256sum ${{ matrix.artifact_name }}.zip > ${{ matrix.artifact_name }}.zip.sha256
+        fi
+        if [ -f "${{ matrix.artifact_name }}.tar.gz" ]; then
+          sha256sum ${{ matrix.artifact_name }}.tar.gz > ${{ matrix.artifact_name }}.tar.gz.sha256
+        fi
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ matrix.artifact_name }}
+        path: |
+          ${{ matrix.artifact_name }}.*
+    
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+    
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          ruxon-engine-linux-x86_64/ruxon-engine-linux-x86_64.tar.gz
+          ruxon-engine-linux-x86_64/ruxon-engine-linux-x86_64.tar.gz.sha256
+          ruxon-engine-windows-x86_64/ruxon-engine-windows-x86_64.zip
+          ruxon-engine-windows-x86_64/ruxon-engine-windows-x86_64.zip.sha256
+          ruxon-engine-macos-x86_64/ruxon-engine-macos-x86_64.tar.gz
+          ruxon-engine-macos-x86_64/ruxon-engine-macos-x86_64.tar.gz.sha256
+        draft: false
+        prerelease: false
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
