@@ -1,0 +1,31 @@
+# Maintainer: Ruxon Engine Contributors
+pkgname=ruxon-engine-git
+pkgver=r0.unknown
+pkgrel=1
+pkgdesc="Free, open source game engine for 2D and 3D games (git version)"
+arch=('x86_64')
+url="https://github.com/Xznder1984/Ruxon-Engine"
+license=('MIT')
+depends=('glfw' 'libgl')
+makedepends=('cmake' 'ninja' 'git')
+provides=('ruxon-engine')
+conflicts=('ruxon-engine')
+source=('git+$url.git')
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/Ruxon-Engine"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cd "$srcdir/Ruxon-Engine"
+  cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+  cmake --build build
+}
+
+package() {
+  cd "$srcdir/Ruxon-Engine"
+  DESTDIR="$pkgdir" cmake --install build
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

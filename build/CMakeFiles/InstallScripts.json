@@ -1,0 +1,16 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/cmake_install.cmake",
+		"/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/thirdparty/cmake_install.cmake",
+		"/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/thirdparty/glm/cmake_install.cmake",
+		"/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/thirdparty/glm/glm/cmake_install.cmake",
+		"/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/src/cmake_install.cmake",
+		"/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/editor/cmake_install.cmake",
+		"/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/runtime/cmake_install.cmake",
+		"/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tools/cmake_install.cmake",
+		"/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tools/lsp/cmake_install.cmake",
+		"/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
