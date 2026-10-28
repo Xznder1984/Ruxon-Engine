@@ -4,6 +4,7 @@ add_executable(ruxon_editor
     docks/scene_tree_dock.cpp
     docks/inspector_dock.cpp
     docks/viewport_dock.cpp
+    about.cpp
 )
 
 target_link_libraries(ruxon_editor PRIVATE ruxon_engine)

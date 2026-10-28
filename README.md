@@ -40,3 +40,11 @@ MIT License - see [LICENSE](LICENSE) for details. Games made with Ruxon belong t
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## Support
+
+If you like Ruxon Engine, consider supporting development:
+
+[Support on SociaBuzz](https://sociabuzz.com/zerobyte/tribe)
+
+Donations are voluntary and no features depend on them.
