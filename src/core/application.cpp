@@ -25,7 +25,9 @@ void Application::Run() {
     Log::Info("Application running...");
     while (m_Running) {
         m_Window->Update();
+        if (m_Window->ShouldClose()) m_Running = false;
     }
+    Log::Info("Application stopped.");
 }
 
 void Application::Stop() {

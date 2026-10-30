@@ -1,45 +1,94 @@
+// SDL3-backed window and event loop (platform layer, section 5.1).
+// SDL owns NSApp on macOS so the process stays responsive to the system.
+
 #include "ruxon/platform/window.h"
 #include "ruxon/core/log.h"
+#include <SDL3/SDL.h>
 
 namespace ruxon {
 namespace platform {
 
 class SDLWindow : public Window {
 public:
-    SDLWindow(const WindowProps& props) : m_Props(props) {
-        core::Log::Info("Creating SDL Window: " + props.title);
+    explicit SDLWindow(const WindowProps& props) : m_Props(props) {
+        if (!SDL_Init(SDL_INIT_VIDEO)) {
+            core::Log::Error(std::string("SDL_Init failed: ") + SDL_GetError());
+            return;
+        }
+
+
+        SDL_WindowFlags flags = SDL_WINDOW_HIGH_PIXEL_DENSITY;
+        if (props.resizable) flags |= SDL_WINDOW_RESIZABLE;
+        if (props.fullscreen) flags |= SDL_WINDOW_FULLSCREEN;
+
+        m_Window = SDL_CreateWindow(props.title.c_str(),
+                                    static_cast<int>(props.width),
+                                    static_cast<int>(props.height),
+                                    flags);
+        if (!m_Window) {
+            core::Log::Error(std::string("SDL_CreateWindow failed: ") + SDL_GetError());
+            return;
+        }
+
+        core::Log::Info("Window opened: " + props.title);
     }
-    
-    ~SDLWindow() override {}
-    
+
+    ~SDLWindow() override {
+        if (m_Window) SDL_DestroyWindow(m_Window);
+        if (SDL_WasInit(SDL_INIT_VIDEO)) SDL_QuitSubSystem(SDL_INIT_VIDEO);
+    }
+
     void Update() override {
-        // Window update logic
+        if (!m_Window) return;
+        SDL_Event event;
+        // Idle-wait (no busy spin) for events or ~frame time, then pump.
+        if (SDL_WaitEventTimeout(&event, 16)) {
+            do {
+                HandleEvent(event);
+            } while (SDL_PollEvent(&event));
+        } else {
+            SDL_PumpEvents();
+        }
     }
-    
-    u32 GetWidth() const override { return m_Props.width; }
-    u32 GetHeight() const override { return m_Props.height; }
-    void* GetNativeWindow() const override { return nullptr; }
-    
-    void SetEventCallback(const EventCallbackFn& callback) override {
-        m_Data.EventCallback = callback;
+
+    u32 GetWidth() const override {
+        int w = 0, h = 0;
+        if (m_Window) SDL_GetWindowSize(m_Window, &w, &h);
+        return static_cast<u32>(w);
     }
-    
-    void SetVSync(bool enabled) override {
-        m_Props.vsync = enabled;
+
+    u32 GetHeight() const override {
+        int w = 0, h = 0;
+        if (m_Window) SDL_GetWindowSize(m_Window, &w, &h);
+        return static_cast<u32>(h);
     }
-    
+
+    void* GetNativeWindow() const override {
+        return static_cast<void*>(m_Window);
+    }
+
+    bool ShouldClose() const override { return m_ShouldClose.load(); }
+
+    void SetVSync(bool enabled) override { m_Props.vsync = enabled; }
     bool IsVSync() const override { return m_Props.vsync; }
-    
+
 private:
-    struct WindowData {
-        std::string title;
-        u32 width, height;
-        bool vsync;
-        EventCallbackFn EventCallback;
-    };
-    
+    void HandleEvent(const SDL_Event& event) {
+        switch (event.type) {
+            case SDL_EVENT_QUIT:
+            case SDL_EVENT_WINDOW_CLOSE_REQUESTED:
+                m_ShouldClose.store(true);
+                break;
+            default:
+                break;
+        }
+    }
+
+
+
     WindowProps m_Props;
-    WindowData m_Data;
+    SDL_Window* m_Window = nullptr;
+    std::atomic<bool> m_ShouldClose{false};
 };
 
 Window* Window::Create(const WindowProps& props) {

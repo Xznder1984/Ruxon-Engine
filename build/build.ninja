@@ -242,6 +242,7 @@ build thirdparty/glm/glm/rebuild_cache: phony thirdparty/glm/glm/CMakeFiles/rebu
 build cmake_object_order_depends_target_ruxon_engine: phony || cmake_object_order_depends_target_glm
 
 build src/CMakeFiles/ruxon_engine.dir/core/log.cpp.o: CXX_COMPILER__ruxon_engine_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/core/log.cpp || cmake_object_order_depends_target_ruxon_engine
+  DEFINES = -DRUXON_HAVE_SDL3
   DEP_FILE = src/CMakeFiles/ruxon_engine.dir/core/log.cpp.o.d
   FLAGS = -std=gnu++20
   INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
@@ -250,6 +251,7 @@ build src/CMakeFiles/ruxon_engine.dir/core/log.cpp.o: CXX_COMPILER__ruxon_engine
   TARGET_SUPPORT_DIR = src/CMakeFiles/ruxon_engine.dir
 
 build src/CMakeFiles/ruxon_engine.dir/core/application.cpp.o: CXX_COMPILER__ruxon_engine_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/core/application.cpp || cmake_object_order_depends_target_ruxon_engine
+  DEFINES = -DRUXON_HAVE_SDL3
   DEP_FILE = src/CMakeFiles/ruxon_engine.dir/core/application.cpp.o.d
   FLAGS = -std=gnu++20
   INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
@@ -258,6 +260,7 @@ build src/CMakeFiles/ruxon_engine.dir/core/application.cpp.o: CXX_COMPILER__ruxo
   TARGET_SUPPORT_DIR = src/CMakeFiles/ruxon_engine.dir
 
 build src/CMakeFiles/ruxon_engine.dir/platform/window.cpp.o: CXX_COMPILER__ruxon_engine_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/platform/window.cpp || cmake_object_order_depends_target_ruxon_engine
+  DEFINES = -DRUXON_HAVE_SDL3
   DEP_FILE = src/CMakeFiles/ruxon_engine.dir/platform/window.cpp.o.d
   FLAGS = -std=gnu++20
   INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
@@ -266,6 +269,7 @@ build src/CMakeFiles/ruxon_engine.dir/platform/window.cpp.o: CXX_COMPILER__ruxon
   TARGET_SUPPORT_DIR = src/CMakeFiles/ruxon_engine.dir
 
 build src/CMakeFiles/ruxon_engine.dir/scene/node.cpp.o: CXX_COMPILER__ruxon_engine_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/scene/node.cpp || cmake_object_order_depends_target_ruxon_engine
+  DEFINES = -DRUXON_HAVE_SDL3
   DEP_FILE = src/CMakeFiles/ruxon_engine.dir/scene/node.cpp.o.d
   FLAGS = -std=gnu++20
   INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
@@ -274,6 +278,7 @@ build src/CMakeFiles/ruxon_engine.dir/scene/node.cpp.o: CXX_COMPILER__ruxon_engi
   TARGET_SUPPORT_DIR = src/CMakeFiles/ruxon_engine.dir
 
 build src/CMakeFiles/ruxon_engine.dir/render/rhi.cpp.o: CXX_COMPILER__ruxon_engine_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/render/rhi.cpp || cmake_object_order_depends_target_ruxon_engine
+  DEFINES = -DRUXON_HAVE_SDL3
   DEP_FILE = src/CMakeFiles/ruxon_engine.dir/render/rhi.cpp.o.d
   FLAGS = -std=gnu++20
   INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
@@ -282,6 +287,7 @@ build src/CMakeFiles/ruxon_engine.dir/render/rhi.cpp.o: CXX_COMPILER__ruxon_engi
   TARGET_SUPPORT_DIR = src/CMakeFiles/ruxon_engine.dir
 
 build src/CMakeFiles/ruxon_engine.dir/render/opengl/opengl_buffer.cpp.o: CXX_COMPILER__ruxon_engine_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/render/opengl/opengl_buffer.cpp || cmake_object_order_depends_target_ruxon_engine
+  DEFINES = -DRUXON_HAVE_SDL3
   DEP_FILE = src/CMakeFiles/ruxon_engine.dir/render/opengl/opengl_buffer.cpp.o.d
   FLAGS = -std=gnu++20
   INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
@@ -290,6 +296,7 @@ build src/CMakeFiles/ruxon_engine.dir/render/opengl/opengl_buffer.cpp.o: CXX_COM
   TARGET_SUPPORT_DIR = src/CMakeFiles/ruxon_engine.dir
 
 build src/CMakeFiles/ruxon_engine.dir/scripting/script.cpp.o: CXX_COMPILER__ruxon_engine_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/scripting/script.cpp || cmake_object_order_depends_target_ruxon_engine
+  DEFINES = -DRUXON_HAVE_SDL3
   DEP_FILE = src/CMakeFiles/ruxon_engine.dir/scripting/script.cpp.o.d
   FLAGS = -std=gnu++20
   INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
@@ -298,6 +305,7 @@ build src/CMakeFiles/ruxon_engine.dir/scripting/script.cpp.o: CXX_COMPILER__ruxo
   TARGET_SUPPORT_DIR = src/CMakeFiles/ruxon_engine.dir
 
 build src/CMakeFiles/ruxon_engine.dir/scripting/lexer/lexer.cpp.o: CXX_COMPILER__ruxon_engine_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/scripting/lexer/lexer.cpp || cmake_object_order_depends_target_ruxon_engine
+  DEFINES = -DRUXON_HAVE_SDL3
   DEP_FILE = src/CMakeFiles/ruxon_engine.dir/scripting/lexer/lexer.cpp.o.d
   FLAGS = -std=gnu++20
   INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
@@ -306,6 +314,7 @@ build src/CMakeFiles/ruxon_engine.dir/scripting/lexer/lexer.cpp.o: CXX_COMPILER_
   TARGET_SUPPORT_DIR = src/CMakeFiles/ruxon_engine.dir
 
 build src/CMakeFiles/ruxon_engine.dir/scripting/vm/vm.cpp.o: CXX_COMPILER__ruxon_engine_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/scripting/vm/vm.cpp || cmake_object_order_depends_target_ruxon_engine
+  DEFINES = -DRUXON_HAVE_SDL3
   DEP_FILE = src/CMakeFiles/ruxon_engine.dir/scripting/vm/vm.cpp.o.d
   FLAGS = -std=gnu++20
   INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
@@ -314,6 +323,7 @@ build src/CMakeFiles/ruxon_engine.dir/scripting/vm/vm.cpp.o: CXX_COMPILER__ruxon
   TARGET_SUPPORT_DIR = src/CMakeFiles/ruxon_engine.dir
 
 build src/CMakeFiles/ruxon_engine.dir/ai/assistant.cpp.o: CXX_COMPILER__ruxon_engine_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/ai/assistant.cpp || cmake_object_order_depends_target_ruxon_engine
+  DEFINES = -DRUXON_HAVE_SDL3
   DEP_FILE = src/CMakeFiles/ruxon_engine.dir/ai/assistant.cpp.o.d
   FLAGS = -std=gnu++20
   INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
@@ -427,6 +437,14 @@ build editor/CMakeFiles/ruxon_editor.dir/docks/viewport_dock.cpp.o: CXX_COMPILER
   OBJECT_FILE_DIR = editor/CMakeFiles/ruxon_editor.dir/docks
   TARGET_SUPPORT_DIR = editor/CMakeFiles/ruxon_editor.dir
 
+build editor/CMakeFiles/ruxon_editor.dir/about.cpp.o: CXX_COMPILER__ruxon_editor_unscanned_ /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/editor/about.cpp || cmake_object_order_depends_target_ruxon_editor
+  DEP_FILE = editor/CMakeFiles/ruxon_editor.dir/about.cpp.o.d
+  FLAGS = -std=gnu++20
+  INCLUDES = -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/include -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/editor -I/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm
+  OBJECT_DIR = editor/CMakeFiles/ruxon_editor.dir
+  OBJECT_FILE_DIR = editor/CMakeFiles/ruxon_editor.dir
+  TARGET_SUPPORT_DIR = editor/CMakeFiles/ruxon_editor.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ruxon_editor
@@ -435,9 +453,9 @@ build editor/CMakeFiles/ruxon_editor.dir/docks/viewport_dock.cpp.o: CXX_COMPILER
 #############################################
 # Link the executable editor/ruxon_editor
 
-build editor/ruxon_editor: CXX_EXECUTABLE_LINKER__ruxon_editor_ editor/CMakeFiles/ruxon_editor.dir/main.cpp.o editor/CMakeFiles/ruxon_editor.dir/ui/theme.cpp.o editor/CMakeFiles/ruxon_editor.dir/docks/scene_tree_dock.cpp.o editor/CMakeFiles/ruxon_editor.dir/docks/inspector_dock.cpp.o editor/CMakeFiles/ruxon_editor.dir/docks/viewport_dock.cpp.o | src/libruxon_engine.a thirdparty/glm/glm/libglm.a || src/libruxon_engine.a thirdparty/glm/glm/libglm.a
+build editor/ruxon_editor: CXX_EXECUTABLE_LINKER__ruxon_editor_ editor/CMakeFiles/ruxon_editor.dir/main.cpp.o editor/CMakeFiles/ruxon_editor.dir/ui/theme.cpp.o editor/CMakeFiles/ruxon_editor.dir/docks/scene_tree_dock.cpp.o editor/CMakeFiles/ruxon_editor.dir/docks/inspector_dock.cpp.o editor/CMakeFiles/ruxon_editor.dir/docks/viewport_dock.cpp.o editor/CMakeFiles/ruxon_editor.dir/about.cpp.o | src/libruxon_engine.a thirdparty/glm/glm/libglm.a /usr/local/lib/libSDL3.0.dylib || src/libruxon_engine.a thirdparty/glm/glm/libglm.a
   LINK_FLAGS = -Wl,-search_paths_first -Wl,-headerpad_max_install_names
-  LINK_LIBRARIES = src/libruxon_engine.a  thirdparty/glm/glm/libglm.a
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  src/libruxon_engine.a  thirdparty/glm/glm/libglm.a  /usr/local/lib/libSDL3.0.dylib
   OBJECT_DIR = editor/CMakeFiles/ruxon_editor.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -511,9 +529,9 @@ build runtime/CMakeFiles/ruxon_player.dir/main.cpp.o: CXX_COMPILER__ruxon_player
 #############################################
 # Link the executable runtime/ruxon_player
 
-build runtime/ruxon_player: CXX_EXECUTABLE_LINKER__ruxon_player_ runtime/CMakeFiles/ruxon_player.dir/main.cpp.o | src/libruxon_engine.a src/libruxon_engine.a thirdparty/glm/glm/libglm.a || src/libruxon_engine.a thirdparty/glm/glm/libglm.a
+build runtime/ruxon_player: CXX_EXECUTABLE_LINKER__ruxon_player_ runtime/CMakeFiles/ruxon_player.dir/main.cpp.o | src/libruxon_engine.a src/libruxon_engine.a thirdparty/glm/glm/libglm.a /usr/local/lib/libSDL3.0.dylib || src/libruxon_engine.a thirdparty/glm/glm/libglm.a
   LINK_FLAGS = -Wl,-search_paths_first -Wl,-headerpad_max_install_names
-  LINK_LIBRARIES = src/libruxon_engine.a  src/libruxon_engine.a  thirdparty/glm/glm/libglm.a
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  src/libruxon_engine.a  src/libruxon_engine.a  thirdparty/glm/glm/libglm.a  /usr/local/lib/libSDL3.0.dylib
   OBJECT_DIR = runtime/CMakeFiles/ruxon_player.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -587,9 +605,9 @@ build tools/CMakeFiles/ruxon.dir/main.cpp.o: CXX_COMPILER__ruxon_unscanned_ /Use
 #############################################
 # Link the executable tools/ruxon
 
-build tools/ruxon: CXX_EXECUTABLE_LINKER__ruxon_ tools/CMakeFiles/ruxon.dir/main.cpp.o | src/libruxon_engine.a src/libruxon_engine.a thirdparty/glm/glm/libglm.a || src/libruxon_engine.a thirdparty/glm/glm/libglm.a
+build tools/ruxon: CXX_EXECUTABLE_LINKER__ruxon_ tools/CMakeFiles/ruxon.dir/main.cpp.o | src/libruxon_engine.a src/libruxon_engine.a thirdparty/glm/glm/libglm.a /usr/local/lib/libSDL3.0.dylib || src/libruxon_engine.a thirdparty/glm/glm/libglm.a
   LINK_FLAGS = -Wl,-search_paths_first -Wl,-headerpad_max_install_names
-  LINK_LIBRARIES = src/libruxon_engine.a  src/libruxon_engine.a  thirdparty/glm/glm/libglm.a
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  src/libruxon_engine.a  src/libruxon_engine.a  thirdparty/glm/glm/libglm.a  /usr/local/lib/libSDL3.0.dylib
   OBJECT_DIR = tools/CMakeFiles/ruxon.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -663,9 +681,9 @@ build tools/lsp/CMakeFiles/ruxon-lsp.dir/main.cpp.o: CXX_COMPILER__ruxon-lsp_uns
 #############################################
 # Link the executable tools/lsp/ruxon-lsp
 
-build tools/lsp/ruxon-lsp: CXX_EXECUTABLE_LINKER__ruxon-lsp_ tools/lsp/CMakeFiles/ruxon-lsp.dir/main.cpp.o | src/libruxon_engine.a thirdparty/glm/glm/libglm.a || src/libruxon_engine.a thirdparty/glm/glm/libglm.a
+build tools/lsp/ruxon-lsp: CXX_EXECUTABLE_LINKER__ruxon-lsp_ tools/lsp/CMakeFiles/ruxon-lsp.dir/main.cpp.o | src/libruxon_engine.a thirdparty/glm/glm/libglm.a /usr/local/lib/libSDL3.0.dylib || src/libruxon_engine.a thirdparty/glm/glm/libglm.a
   LINK_FLAGS = -Wl,-search_paths_first -Wl,-headerpad_max_install_names
-  LINK_LIBRARIES = src/libruxon_engine.a  thirdparty/glm/glm/libglm.a
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  src/libruxon_engine.a  thirdparty/glm/glm/libglm.a  /usr/local/lib/libSDL3.0.dylib
   OBJECT_DIR = tools/lsp/CMakeFiles/ruxon-lsp.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -739,9 +757,9 @@ build tests/CMakeFiles/ruxon_tests.dir/main.cpp.o: CXX_COMPILER__ruxon_tests_uns
 #############################################
 # Link the executable tests/ruxon_tests
 
-build tests/ruxon_tests: CXX_EXECUTABLE_LINKER__ruxon_tests_ tests/CMakeFiles/ruxon_tests.dir/main.cpp.o | src/libruxon_engine.a src/libruxon_engine.a thirdparty/glm/glm/libglm.a || src/libruxon_engine.a thirdparty/glm/glm/libglm.a
+build tests/ruxon_tests: CXX_EXECUTABLE_LINKER__ruxon_tests_ tests/CMakeFiles/ruxon_tests.dir/main.cpp.o | src/libruxon_engine.a src/libruxon_engine.a thirdparty/glm/glm/libglm.a /usr/local/lib/libSDL3.0.dylib || src/libruxon_engine.a thirdparty/glm/glm/libglm.a
   LINK_FLAGS = -Wl,-search_paths_first -Wl,-headerpad_max_install_names
-  LINK_LIBRARIES = src/libruxon_engine.a  src/libruxon_engine.a  thirdparty/glm/glm/libglm.a
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  src/libruxon_engine.a  src/libruxon_engine.a  thirdparty/glm/glm/libglm.a  /usr/local/lib/libSDL3.0.dylib
   OBJECT_DIR = tests/CMakeFiles/ruxon_tests.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -886,14 +904,14 @@ build tools/lsp/all: phony tools/lsp/ruxon-lsp
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/thirdparty/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/thirdparty/glm/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/thirdparty/glm/glm/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/src/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/editor/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/runtime/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tools/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tools/lsp/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tests/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/CTestTestfile.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tests/CTestTestfile.cmake: RERUN_CMAKE | /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/editor/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/runtime/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tests/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm/glm/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tools/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tools/lsp/CMakeLists.txt /usr/local/share/cmake/Modules/CMakeCInformation.cmake /usr/local/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake/Modules/Compiler/AppleClang-C.cmake /usr/local/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake/Modules/Compiler/Clang.cmake /usr/local/share/cmake/Modules/Compiler/GNU.cmake /usr/local/share/cmake/Modules/GNUInstallDirs.cmake /usr/local/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/local/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/local/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/local/share/cmake/Modules/Linker/AppleClang-C.cmake /usr/local/share/cmake/Modules/Linker/AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Linker/AppleClang.cmake /usr/local/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /usr/local/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang-C.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang.cmake /usr/local/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/share/cmake/Modules/Platform/Darwin.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /usr/local/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.4.4/CMakeCCompiler.cmake CMakeFiles/4.4.4/CMakeCXXCompiler.cmake CMakeFiles/4.4.4/CMakeSystem.cmake
+build build.ninja /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/thirdparty/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/thirdparty/glm/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/thirdparty/glm/glm/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/src/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/editor/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/runtime/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tools/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tools/lsp/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tests/cmake_install.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/CTestTestfile.cmake /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/tests/CTestTestfile.cmake: RERUN_CMAKE | /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/editor/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/runtime/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tests/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm/glm/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tools/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tools/lsp/CMakeLists.txt /usr/local/lib/cmake/SDL3/SDL3Config.cmake /usr/local/lib/cmake/SDL3/SDL3ConfigVersion.cmake /usr/local/lib/cmake/SDL3/SDL3headersTargets.cmake /usr/local/lib/cmake/SDL3/SDL3sharedTargets-release.cmake /usr/local/lib/cmake/SDL3/SDL3sharedTargets.cmake /usr/local/lib/cmake/SDL3/SDL3testTargets-release.cmake /usr/local/lib/cmake/SDL3/SDL3testTargets.cmake /usr/local/share/cmake/Modules/CMakeCInformation.cmake /usr/local/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake/Modules/Compiler/AppleClang-C.cmake /usr/local/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake/Modules/Compiler/Clang.cmake /usr/local/share/cmake/Modules/Compiler/GNU.cmake /usr/local/share/cmake/Modules/FeatureSummary.cmake /usr/local/share/cmake/Modules/GNUInstallDirs.cmake /usr/local/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/local/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/local/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/local/share/cmake/Modules/Linker/AppleClang-C.cmake /usr/local/share/cmake/Modules/Linker/AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Linker/AppleClang.cmake /usr/local/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /usr/local/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang-C.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang.cmake /usr/local/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/share/cmake/Modules/Platform/Darwin.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /usr/local/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.4.4/CMakeCCompiler.cmake CMakeFiles/4.4.4/CMakeCXXCompiler.cmake CMakeFiles/4.4.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/editor/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/runtime/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tests/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm/glm/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tools/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tools/lsp/CMakeLists.txt /usr/local/share/cmake/Modules/CMakeCInformation.cmake /usr/local/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake/Modules/Compiler/AppleClang-C.cmake /usr/local/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake/Modules/Compiler/Clang.cmake /usr/local/share/cmake/Modules/Compiler/GNU.cmake /usr/local/share/cmake/Modules/GNUInstallDirs.cmake /usr/local/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/local/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/local/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/local/share/cmake/Modules/Linker/AppleClang-C.cmake /usr/local/share/cmake/Modules/Linker/AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Linker/AppleClang.cmake /usr/local/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /usr/local/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang-C.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang.cmake /usr/local/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/share/cmake/Modules/Platform/Darwin.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /usr/local/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.4.4/CMakeCCompiler.cmake CMakeFiles/4.4.4/CMakeCXXCompiler.cmake CMakeFiles/4.4.4/CMakeSystem.cmake: phony
+build /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/editor/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/runtime/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/src/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tests/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/thirdparty/glm/glm/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tools/CMakeLists.txt /Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/tools/lsp/CMakeLists.txt /usr/local/lib/cmake/SDL3/SDL3Config.cmake /usr/local/lib/cmake/SDL3/SDL3ConfigVersion.cmake /usr/local/lib/cmake/SDL3/SDL3headersTargets.cmake /usr/local/lib/cmake/SDL3/SDL3sharedTargets-release.cmake /usr/local/lib/cmake/SDL3/SDL3sharedTargets.cmake /usr/local/lib/cmake/SDL3/SDL3testTargets-release.cmake /usr/local/lib/cmake/SDL3/SDL3testTargets.cmake /usr/local/share/cmake/Modules/CMakeCInformation.cmake /usr/local/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake/Modules/Compiler/AppleClang-C.cmake /usr/local/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake/Modules/Compiler/Clang.cmake /usr/local/share/cmake/Modules/Compiler/GNU.cmake /usr/local/share/cmake/Modules/FeatureSummary.cmake /usr/local/share/cmake/Modules/GNUInstallDirs.cmake /usr/local/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/local/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/local/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/local/share/cmake/Modules/Linker/AppleClang-C.cmake /usr/local/share/cmake/Modules/Linker/AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Linker/AppleClang.cmake /usr/local/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /usr/local/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang-C.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Apple-Clang.cmake /usr/local/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/share/cmake/Modules/Platform/Darwin.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /usr/local/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.4.4/CMakeCCompiler.cmake CMakeFiles/4.4.4/CMakeCXXCompiler.cmake CMakeFiles/4.4.4/CMakeSystem.cmake: phony
 
 
 #############################################

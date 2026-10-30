@@ -14,3 +14,5 @@ public:
 ruxon::core::Application* ruxon::core::CreateApplication() {
     return new RuxonEditor();
 }
+
+#include <iostream>

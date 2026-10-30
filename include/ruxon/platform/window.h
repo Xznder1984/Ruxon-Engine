@@ -19,18 +19,21 @@ struct WindowProps {
 class Window {
 public:
     using EventCallbackFn = std::function<void()>;
-    
+
     virtual ~Window() = default;
-    
+
+    // Pumps and dispatches OS events. Must be called once per frame.
     virtual void Update() = 0;
     virtual u32 GetWidth() const = 0;
     virtual u32 GetHeight() const = 0;
     virtual void* GetNativeWindow() const = 0;
-    
-    virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
+
+    // True once the user closed the window; the application loop checks this.
+    virtual bool ShouldClose() const = 0;
+
     virtual void SetVSync(bool enabled) = 0;
     virtual bool IsVSync() const = 0;
-    
+
     static Window* Create(const WindowProps& props = WindowProps());
 };
 

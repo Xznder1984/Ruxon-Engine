@@ -33,10 +33,28 @@ jobs:
       if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake ninja-build libgl1-mesa-dev
-    
+        sudo apt-get install -y ninja-build libsdl3-dev
+
+    - name: Install dependencies (macOS)
+      if: matrix.os == 'macos-latest'
+      run: brew install sdl3
+
+    - name: Install dependencies (Windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        vcpkg install sdl3:x64-windows
+        cmake -S . -B _toolchain_probe >/dev/null 2>&1 || true
+
     - name: Configure CMake
-      run: cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+      shell: bash
+      env:
+        VCPKG_ROOT: ${{ env.VCPKG_INSTALLATION_ROOT }}
+      run: |
+        if [ "${{ matrix.os }}" = "windows-latest" ]; then
+          cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake"
+        else
+          cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+        fi
     
     - name: Build
       run: cmake --build build --config Release

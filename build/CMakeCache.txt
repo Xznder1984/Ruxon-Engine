@@ -366,6 +366,9 @@ RuxonEngine_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 RuxonEngine_SOURCE_DIR:STATIC=/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine
 
+//The directory containing a CMake configuration file for SDL3.
+SDL3_DIR:PATH=/usr/local/lib/cmake/SDL3
+
 //Value Computed by CMake
 glm_BINARY_DIR:STATIC=/Users/zerobyte/Desktop/Projects/Coding/C-Stuff/Engine/build/thirdparty/glm
 
