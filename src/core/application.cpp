@@ -33,6 +33,7 @@ void Application::Run() {
         if (m_Window->ShouldClose()) m_Running = false;
 
         m_RHI->Clear(m_ClearColor.x, m_ClearColor.y, m_ClearColor.z);
+        OnFrame();
         m_RHI->SwapBuffers();
     }
     Log::Info("Application stopped.");

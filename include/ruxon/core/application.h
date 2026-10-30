@@ -24,6 +24,11 @@ public:
 
     void SetClearColor(f32 r, f32 g, f32 b) { m_ClearColor = {r, g, b}; }
 
+protected:
+    // Called every frame after the clear, before the buffer swap. Subclasses
+    // draw their UI / scene here.
+    virtual void OnFrame() {}
+
 private:
     std::unique_ptr<platform::Window> m_Window;
     std::unique_ptr<render::RHI> m_RHI;

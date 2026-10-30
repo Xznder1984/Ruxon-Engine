@@ -82,6 +82,7 @@ public:
 
 private:
     void HandleEvent(const SDL_Event& event) {
+        if (m_EventCallback) m_EventCallback(const_cast<SDL_Event*>(&event));
         switch (event.type) {
             case SDL_EVENT_QUIT:
             case SDL_EVENT_WINDOW_CLOSE_REQUESTED:

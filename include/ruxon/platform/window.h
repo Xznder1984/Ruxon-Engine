@@ -3,6 +3,7 @@
 #include "ruxon/core/types.h"
 #include <string>
 #include <functional>
+#include <atomic>
 
 namespace ruxon {
 namespace platform {
@@ -18,7 +19,7 @@ struct WindowProps {
 
 class Window {
 public:
-    using EventCallbackFn = std::function<void()>;
+    using EventCallbackFn = std::function<void(void*)>;
 
     virtual ~Window() = default;
 
@@ -30,11 +31,18 @@ public:
 
     // True once the user closed the window; the application loop checks this.
     virtual bool ShouldClose() const = 0;
-
     virtual void SetVSync(bool enabled) = 0;
     virtual bool IsVSync() const = 0;
 
+    // Receives pumped OS events (typed as SDL_Event* here; kept void* so the
+    // platform layer stays SDL-free in its public interface). Install before
+    // Run, e.g. to forward input to the editor's UI library.
+    void SetEventCallback(EventCallbackFn cb) { m_EventCallback = std::move(cb); }
+
     static Window* Create(const WindowProps& props = WindowProps());
+
+protected:
+    EventCallbackFn m_EventCallback;
 };
 
 } // namespace platform
