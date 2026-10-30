@@ -216,12 +216,20 @@ private:
         ApplyImGuiTheme();
     }
 
-    // Builds the default docking arrangement (Scene Tree | Viewport | Inspector)
-    // exactly once, the first frame a dockspace exists.
+    // Builds the default docking arrangement (Scene Tree | Game Preview |
+    // Inspector) whenever it is missing — e.g. first run, or after a dock
+    // rename that stranded a window as floating.
     void BuildInitialDockLayout() {
         const ImGuiID dockspaceID = ImGui::GetID("RuxonDockSpace");
         ImGuiDockNode* node = ImGui::DockBuilderGetNode(dockspaceID);
-        if (node != nullptr && node->IsSplitNode()) return;
+        bool needBuild = node == nullptr || !node->IsSplitNode();
+        if (!needBuild) {
+            // window renamed? its saved dock slot no longer matches and it
+            // would float forever — rebuild once in that case.
+            const ImGuiWindow* preview = ImGui::FindWindowByName("Game Preview");
+            if (preview != nullptr && !preview->DockIsActive) needBuild = true;
+        }
+        if (!needBuild) return;
 
         ImGui::DockBuilderRemoveNode(dockspaceID);
         ImGui::DockBuilderAddNode(dockspaceID, ImGuiDockNodeFlags_DockSpace);
