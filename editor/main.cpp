@@ -232,7 +232,7 @@ private:
         ImGui::DockBuilderSplitNode(centerID, ImGuiDir_Right, 0.26f, &rightID, &centerID);
 
         ImGui::DockBuilderDockWindow("Scene Tree", leftID);
-        ImGui::DockBuilderDockWindow("Viewport", centerID);
+        ImGui::DockBuilderDockWindow("Game Preview", centerID);
         ImGui::DockBuilderDockWindow("Inspector", rightID);
         ImGui::DockBuilderFinish(dockspaceID);
         m_LayoutBuilt = true;
