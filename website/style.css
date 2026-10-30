@@ -85,6 +85,23 @@ nav {
     outline-offset: 2px;
 }
 
+.btn-support {
+    margin-left: 0.75rem;
+    background: #f97316;
+    color: #1A1207;
+    font-weight: 700;
+}
+
+.btn-support:hover,
+.btn-support:focus {
+    background: #ea580c;
+    color: #1A1207;
+}
+
+.hero .btn-support {
+    display: inline-block;
+}
+
 .features {
     padding: 4rem 2rem;
     max-width: 1200px;

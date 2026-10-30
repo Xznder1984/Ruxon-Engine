@@ -17,7 +17,8 @@ target_include_directories(ruxon_engine PUBLIC
 
 target_compile_features(ruxon_engine PUBLIC cxx_std_20)
 
-target_link_libraries(ruxon_engine PUBLIC glm)
+find_package(OpenGL REQUIRED)
+target_link_libraries(ruxon_engine PUBLIC glm OpenGL::GL)
 
 find_package(SDL3 CONFIG QUIET)
 if(SDL3_FOUND)

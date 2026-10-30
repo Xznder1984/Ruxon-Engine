@@ -19,7 +19,7 @@ jobs:
 
     - name: Install dependencies (Ubuntu)
       if: matrix.os == 'ubuntu-latest'
-      run: sudo apt-get update && sudo apt-get install -y ninja-build libsdl3-dev
+      run: sudo apt-get update && sudo apt-get install -y ninja-build libsdl3-dev libgl1-mesa-dev
 
     - name: Install dependencies (macOS)
       if: matrix.os == 'macos-latest'

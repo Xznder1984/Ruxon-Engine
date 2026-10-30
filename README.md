@@ -1,5 +1,7 @@
 # Ruxon Engine
 
+[![Support on SociaBuzz](https://img.shields.io/badge/Support%20on%20SociaBuzz-%E2%9D%A4%EF%B8%8F-f97316?style=for-the-badge&logo=ko-fi&logoColor=white)](https://sociabuzz.com/zerobyte/tribe)
+
 A free, fully open source game engine and editor for making 2D and 3D games, written in C++20 with OpenGL.
 
 ## Goals

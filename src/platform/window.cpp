@@ -17,9 +17,17 @@ public:
         }
 
 
-        SDL_WindowFlags flags = SDL_WINDOW_HIGH_PIXEL_DENSITY;
+        SDL_WindowFlags flags = SDL_WINDOW_HIGH_PIXEL_DENSITY | SDL_WINDOW_OPENGL;
         if (props.resizable) flags |= SDL_WINDOW_RESIZABLE;
         if (props.fullscreen) flags |= SDL_WINDOW_FULLSCREEN;
+
+        // GL 4.1 core: the newest profile macOS supports; widely available
+        // (and forward-compatible with newer drivers) on Windows/Linux.
+        SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+        SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
+        SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
+        SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+        SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
 
         m_Window = SDL_CreateWindow(props.title.c_str(),
                                     static_cast<int>(props.width),
