@@ -1,0 +1,8 @@
+# Build outputs
+/build/
+/build-release/
+build*/
+
+# Tooling
+.cache/
+compile_commands.json
